@@ -98,7 +98,35 @@ const HeroSection = () => {
             }}
           >
             <div className="hero-rounded-container">
-              <img src="/hero-main-page.svg" alt="Zapply Application Interface" className="hero-main-image" />
+              <img src="/hero-background.png" alt="" className="hero-layer hero-layer-bg" />
+              <img src="/hero-layer-1.png" alt="" className="hero-layer hero-layer-logo" />
+              <img src="/hero-box-1.png" alt="" className="hero-layer hero-layer-box" />
+              <img src="/hero-foreground.png" alt="" className="hero-layer hero-layer-fg" />
+              
+              <div className="hero-layer-works-box">
+                <div className="works-box-content">
+                  <h3 className="works-title">Works on:</h3>
+                  <div className="platform-item">
+                    <img src="/workday-logo.png" alt="Workday" />
+                    <span>Workday</span>
+                  </div>
+                  <div className="platform-item">
+                    <img src="/greenhouse-logo.png" alt="Greenhouse" />
+                    <span>Greenhouse</span>
+                  </div>
+                  <div className="platform-item">
+                    <img src="/lever-logo.png" alt="Lever" />
+                    <span>Lever</span>
+                  </div>
+                  <div className="platform-item">
+                    <img src="/ashbyhq-logo.png" alt="AshbyHQ" />
+                    <span>AshbyHQ</span>
+                  </div>
+                  <div className="platform-item more">
+                    <span>+18 more</span>
+                  </div>
+                </div>
+              </div>
             </div>
           </motion.div>
         </div>

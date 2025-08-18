@@ -15,11 +15,13 @@
 }
 
 .hero-left {
-    flex: 0.8;
+    flex: 1;
+    min-width: 0;
 }
 
 .hero-right {
-    flex: 1.2;
+    flex: 1;
+    min-width: 0;
 }
 
 .hero-title {
@@ -121,8 +123,8 @@
 
 .main-image-container {
     position: relative;
-    max-width: 1200px;
-    margin: 0 auto;
+    width: 100%;
+    max-width: 100%;
 }
 
 .hero-rounded-container {
@@ -131,13 +133,161 @@
     overflow: hidden;
     background-color: #F8F8F8;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
-    z-index: 1;
+    width: 120%;
+    margin-left: -10%;
+    padding-bottom: calc(2216 / 4520 * 120%);
+    height: 0;
 }
 
-.hero-main-image {
+.hero-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
+    height: 100%;
+}
+
+.hero-layer-bg {
+    z-index: 1;
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+
+.hero-layer-logo {
+    z-index: 2;
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+    left: -20%;
+    /* top: -10%; */
+    opacity: 0.6;
+    animation: logoPulse 2s ease-out forwards;
+}
+
+@keyframes logoPulse {
+    0% {
+        transform: scale(0.7);
+        opacity: 0.2;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.4;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0.6;
+    }
+}
+
+.hero-layer-box {
+    z-index: 3;
+    width: 30%;
     height: auto;
-    display: block;
+    left: auto;
+    right: 1%;
+    top: 45%;
+    transform: translateY(-50%);
+    object-fit: contain;
+    animation: slideInRight 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+@keyframes slideInRight {
+    0% {
+        right: -35%;
+        opacity: 0;
+    }
+    100% {
+        right: 1%;
+        opacity: 1;
+    }
+}
+
+.hero-layer-fg {
+    z-index: 4;
+    /* IMPORTANT: Same scaling as background */
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+
+.hero-layer-works-box {
+    position: absolute;
+    z-index: 3;
+    width: 25%;
+    aspect-ratio: 0.8;
+    left: 3%;
+    top: 45%;
+    transform: translateY(-50%);
+    animation: slideInLeft 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    font-size: calc(0.25vw + 0.25vh);
+}
+
+.works-box-content {
+    width: 100%;
+    height: 100%;
+    background: white;
+    border-radius: 8%;
+    padding: 8%;
+    box-shadow: 0 2% 6% rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+.works-title {
+    font-size: 1.4em;
+    font-weight: 700;
+    color: #2D2D2D;
+    margin: 0 0 0.8em 0;
+    font-family: 'Montserrat', sans-serif;
+    text-align: left;
+}
+
+.platform-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    padding: 0.4em 0.6em;
+    background: #F8F8F8;
+    border-radius: 100px;
+    margin-bottom: 0.6em;
+    border: 1px solid #E5E5E5;
+}
+
+.platform-item img {
+    width: 1.2em;
+    height: 1.2em;
+    object-fit: contain;
+}
+
+.platform-item span {
+    font-size: 1em;
+    color: #2D2D2D;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.platform-item.more {
+    background: #F0F0F0;
+    justify-content: center;
+    width: max-content;
+    padding: 0.4em 1em;
+}
+
+@keyframes slideInLeft {
+    0% {
+        left: -30%;
+        opacity: 0;
+    }
+    100% {
+        left: 3%;
+        opacity: 1;
+    }
 }
 
 @media (max-width: 1024px) {
@@ -153,6 +303,16 @@
 
     .hero-waitlist-form {
         justify-content: center;
+    }
+
+    .main-image-container {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .hero-rounded-container {
+        aspect-ratio: 4520 / 2216;
+        width: 100%;
     }
 }
 
@@ -203,6 +363,27 @@
 
     .hero-waitlist-btn {
         width: 100%;
+    }
+
+    .main-image-container {
+        width: 100%;
+    }
+
+    .hero-rounded-container {
+        width: 100%;
+        margin-left: 0;
+        padding-bottom: 0;
+        height: 300px;
+        min-height: 300px;
+    }
+    
+    .hero-layer-bg,
+    .hero-layer-fg {
+        object-fit: cover;
+    }
+    
+    .hero-layer-works-box {
+        display: none;
     }
 
     .main-image-container {
