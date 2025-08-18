@@ -4,7 +4,7 @@
   "description": "Zapply website",
   "scripts": {
     "dev": "cd zapply-react && npm run dev",
-    "build": "cd zapply-react && npm ci && npm run build",
+    "build": "cd zapply-react && rm -rf node_modules package-lock.json && npm install && npm run build",
     "preview": "cd zapply-react && npm run preview"
   },
   "devDependencies": {}
