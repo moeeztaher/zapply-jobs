@@ -53,15 +53,18 @@
 
 .faq-item {
     background: #FFFFFF;
-    border: 1px solid #FFE5E0;
-    border-radius: 12px;
+    border: 1px solid #E5E5E5;
+    border-radius: 16px;
     overflow: hidden;
-    transition: background 0.2s ease, border-color 0.2s ease;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
 
 .faq-item.expanded {
-    background: #FFF5F3;
+    background: #FFFFFF;
     border-color: #FF6B4A;
+    box-shadow: 0 8px 24px rgba(255, 107, 74, 0.15);
+    transform: translateY(-2px);
 }
 
 .faq-question {
@@ -79,7 +82,7 @@
 }
 
 .faq-question:hover {
-    background: rgba(255, 107, 74, 0.05);
+    background: rgba(255, 107, 74, 0.03);
 }
 
 .faq-question span {
@@ -90,12 +93,12 @@
 }
 
 .faq-item.expanded .faq-question span {
-    color: #FF6B4A;
+    color: #2D2D2D;
 }
 
 .faq-arrow {
     color: #8B8B8B;
-    transition: transform 0.2s ease-out, color 0.2s ease;
+    transition: transform 0.3s cubic-bezier(0.4, 0.0, 0.2, 1), color 0.2s ease;
     flex-shrink: 0;
 }
 
@@ -107,15 +110,17 @@
 .faq-answer {
     height: 0;
     overflow: hidden;
-    transition: height 0.2s ease-out;
+    transition: height 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
 }
 
 .faq-answer p {
     padding: 0 24px 24px 24px;
     font-size: 15px;
-    line-height: 1.6;
+    line-height: 1.8;
     color: #6B6B6B;
     margin: 0;
+    border-top: 1px solid #F0F0F0;
+    padding-top: 20px;
 }
 
 .faq-triangle {
