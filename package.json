@@ -1,0 +1,11 @@
+{
+  "name": "zapply-website",
+  "version": "1.0.0",
+  "description": "Zapply website",
+  "scripts": {
+    "dev": "cd zapply-react && npm run dev",
+    "build": "cd zapply-react && npm install && npm run build",
+    "preview": "cd zapply-react && npm run preview"
+  },
+  "devDependencies": {}
+}
