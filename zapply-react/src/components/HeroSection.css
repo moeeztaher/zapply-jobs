@@ -1,0 +1,220 @@
+.hero-section {
+    padding: 80px 80px 60px;
+    position: relative;
+    background: linear-gradient(to bottom, #e8e8e8 0%, #FFFFFF 100%);
+    overflow: visible;
+    text-align: center;
+}
+
+.hero-content-wrapper {
+    max-width: 1400px;
+    margin: 60px auto 85px;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.hero-left {
+    flex: 0.8;
+}
+
+.hero-right {
+    flex: 1.2;
+}
+
+.hero-title {
+    font-size: 72px;
+    font-weight: 600;
+    color: #2D2D2D;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.hero-title .autopilot {
+    font-family: 'Caveat', cursive;
+    color: #FF6B4A;
+    font-weight: 700;
+    font-size: 80px;
+    font-style: normal;
+    margin-left: 16px;
+}
+
+.hero-subtitle {
+    font-size: 20px;
+    color: #2D2D2D;
+    font-weight: 400;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.hero-waitlist {
+    margin-top: 50px;
+}
+
+.waitlist-title {
+    text-align: left;
+    font-size: 24px;
+    font-weight: 700;
+    color: #2D2D2D;
+    margin-bottom: 10px;
+}
+
+.waitlist-subtitle {
+    text-align: left;
+    font-size: 16px;
+    color: #6B6B6B;
+    margin-bottom: 25px;
+}
+
+.hero-waitlist-form {
+    display: flex;
+    gap: 12px;
+    justify-content: flex-start;
+}
+
+.hero-waitlist-input {
+    flex: 1;
+    max-width: 300px;
+    padding: 14px 20px;
+    border: 2px solid #E5E5E5;
+    border-radius: 10px;
+    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+    background: #FFFFFF;
+    transition: all 0.3s ease;
+}
+
+.hero-waitlist-input::placeholder {
+    color: #9B9B9B;
+}
+
+.hero-waitlist-input:focus {
+    outline: none;
+    border-color: #FF6B4A;
+    transform: scale(1.02);
+}
+
+.hero-waitlist-btn {
+    padding: 14px 36px;
+    background: #FF6B4A;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-waitlist-btn:hover {
+    background: #FF5733;
+    transform: scale(1.05);
+}
+
+.hero-waitlist-btn:active {
+    transform: scale(1.02);
+}
+
+.main-image-container {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hero-rounded-container {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: #F8F8F8;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    z-index: 1;
+}
+
+.hero-main-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+@media (max-width: 1024px) {
+    .hero-content-wrapper {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .waitlist-title,
+    .waitlist-subtitle {
+        text-align: center;
+    }
+
+    .hero-waitlist-form {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 60px 25px;
+    }
+
+    .hero-content-wrapper {
+        flex-direction: column-reverse;
+        gap: 40px;
+        margin: 60px auto 0;
+    }
+
+    .hero-title {
+        font-size: 42px;
+    }
+
+    .hero-title .autopilot {
+        font-size: 48px;
+    }
+
+    .hero-subtitle {
+        font-size: 18px;
+    }
+
+    .waitlist-title,
+    .waitlist-subtitle {
+        text-align: center;
+    }
+
+    .hero-waitlist {
+        padding: 0;
+        margin-top: 30px;
+    }
+
+    .hero-waitlist-form {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+    }
+
+    .hero-waitlist-input {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .hero-waitlist-btn {
+        width: 100%;
+    }
+
+    .main-image-container {
+        width: 100%;
+    }
+
+    .hero-rounded-container {
+        width: 100%;
+    }
+
+    .hero-main-image {
+        width: 100%;
+        height: auto;
+    }
+}

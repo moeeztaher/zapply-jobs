@@ -1,0 +1,93 @@
+.apply-jobs-section {
+    background-color: #231f20;
+    padding: 100px 80px;
+    position: relative;
+    overflow: hidden;
+}
+
+.apply-jobs-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+}
+
+.apply-jobs-content {
+    flex: 1;
+    max-width: 600px;
+}
+
+.apply-jobs-title {
+    font-size: 56px;
+    font-weight: 600;
+    color: #FFFFFF;
+    line-height: 1.2;
+    margin-bottom: 24px;
+    white-space: nowrap;
+}
+
+.apply-jobs-title .click-text {
+    font-family: 'Caveat', cursive;
+    color: #FFC94A;
+    font-weight: 700;
+    font-size: 64px;
+    display: inline-block;
+}
+
+.apply-jobs-description {
+    font-size: 20px;
+    font-weight: 400;
+    color: #FFFFFF;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+.apply-jobs-images {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 700px;
+}
+
+.meta-zapply-image {
+    width: 100%;
+    height: auto;
+    max-width: 700px;
+}
+
+@media (max-width: 768px) {
+    .apply-jobs-section {
+        padding: 60px 25px;
+    }
+
+    .apply-jobs-container {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .apply-jobs-title {
+        font-size: 36px;
+        white-space: normal;
+    }
+
+    .apply-jobs-title .click-text {
+        font-size: 42px;
+    }
+
+    .apply-jobs-description {
+        font-size: 18px;
+    }
+
+    .apply-jobs-images {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .meta-zapply-image {
+        width: 90%;
+        max-width: 400px;
+    }
+}
