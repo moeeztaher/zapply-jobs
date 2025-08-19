@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import { useTheme } from '../context/ThemeContext';
 import useInView from '../hooks/useInView';
 import './Footer.css';
 
 const Footer = () => {
   const [ref, isInView] = useInView({ threshold: 0.1 });
   const [email, setEmail] = useState('');
+  const { isDarkMode } = useTheme();
 
   const handleNewsletterSubmit = (e) => {
     e.preventDefault();
@@ -23,7 +25,7 @@ const Footer = () => {
     >
       <div className="footer-container">
         <div className="footer-brand">
-          <img src="/logo-white.svg" alt="Zapply Logo" className="footer-logo" />
+          <img src={isDarkMode ? "/logo.svg" : "/logo-white.svg"} alt="Zapply Logo" className="footer-logo" />
           <div className="footer-socials">
             <a href="#instagram" aria-label="Instagram">
               <img src="/instagram-footer.svg" alt="Instagram" className="footer-social-icon" />

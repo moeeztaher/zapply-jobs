@@ -1,11 +1,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useTheme } from '../context/ThemeContext';
 import useInView from '../hooks/useInView';
 import './StatsSection.css';
 
 const StatsSection = () => {
   const [ref, isInView] = useInView({ threshold: 0.1 });
   const [textRef, textInView] = useInView({ threshold: 0.1 });
+  const { isDarkMode } = useTheme();
 
   return (
     <>
@@ -16,7 +18,11 @@ const StatsSection = () => {
         animate={isInView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.8 }}
       >
-        <img src="/stars.svg" alt="5 stars rating - Igniting 10,000+ Careers" className="stars-image" />
+        <img 
+          src={isDarkMode ? "/stars-dark.svg" : "/stars.svg"} 
+          alt="5 stars rating - Igniting 10,000+ Careers" 
+          className="stars-image" 
+        />
       </motion.section>
 
       <section className="footer-text" ref={textRef}>
@@ -40,12 +46,12 @@ const StatsSection = () => {
       <section className="companies-banner">
         <div className="companies-ticker">
           <div className="companies-track">
-            <img src="/companies-banner.svg" alt="Companies" className="companies-image" />
-            <img src="/companies-banner.svg" alt="Companies" className="companies-image" />
+            <img src={isDarkMode ? "/companies-dark.svg" : "/companies-banner.svg"} alt="Companies" className="companies-image" />
+            <img src={isDarkMode ? "/companies-dark.svg" : "/companies-banner.svg"} alt="Companies" className="companies-image" />
           </div>
           <div className="companies-track" aria-hidden="true">
-            <img src="/companies-banner.svg" alt="Companies" className="companies-image" />
-            <img src="/companies-banner.svg" alt="Companies" className="companies-image" />
+            <img src={isDarkMode ? "/companies-dark.svg" : "/companies-banner.svg"} alt="Companies" className="companies-image" />
+            <img src={isDarkMode ? "/companies-dark.svg" : "/companies-banner.svg"} alt="Companies" className="companies-image" />
           </div>
         </div>
       </section>

@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { useTheme } from '../context/ThemeContext';
 import './HeroSection.css';
 
 const HeroSection = () => {
+  const { isDarkMode } = useTheme();
   const [typewriterText, setTypewriterText] = useState('');
   const [email, setEmail] = useState('');
   const fullText = 'Autopilot.';
@@ -17,10 +19,10 @@ const HeroSection = () => {
         } else {
           clearInterval(typeInterval);
         }
-      }, 50);
+      }, 40);
     };
 
-    const timer = setTimeout(startTyping, 400);
+    const timer = setTimeout(startTyping, 200);
     return () => clearTimeout(timer);
   }, []);
 
@@ -37,9 +39,11 @@ const HeroSection = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ 
-          duration: 0.4,
+          duration: 0.3,
           ease: [0.25, 0.1, 0.25, 1],
-          type: "tween"
+          type: "spring",
+          damping: 20,
+          stiffness: 300
         }}
       >
         Job Hunting on<span className="autopilot" id="typewriter-text">{typewriterText}</span>
@@ -50,9 +54,12 @@ const HeroSection = () => {
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ 
-          duration: 0.4, 
-          delay: 0.2,
-          ease: [0.25, 0.1, 0.25, 1]
+          duration: 0.25, 
+          delay: 0.1,
+          ease: [0.25, 0.1, 0.25, 1],
+          type: "spring",
+          damping: 25,
+          stiffness: 350
         }}
       >
         Apply to jobs in seconds — free, effortless, built for you.
@@ -65,9 +72,12 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ 
-              duration: 0.5, 
-              delay: 0.4,
-              ease: [0.25, 0.1, 0.25, 1]
+              duration: 0.3, 
+              delay: 0.2,
+              ease: [0.25, 0.1, 0.25, 1],
+              type: "spring",
+              damping: 22,
+              stiffness: 320
             }}
           >
             <h3 className="waitlist-title">Be the First to Know!</h3>
@@ -100,7 +110,7 @@ const HeroSection = () => {
             <div className="hero-rounded-container">
               <img src="/hero-background.png" alt="" className="hero-layer hero-layer-bg" />
               <img src="/hero-layer-1.png" alt="" className="hero-layer hero-layer-logo" />
-              <img src="/hero-box-1.png" alt="" className="hero-layer hero-layer-box" />
+              <img src={isDarkMode ? "/hero-box-1-dark.png" : "/hero-box-1.png"} alt="" className="hero-layer hero-layer-box" />
               <img src="/hero-foreground.png" alt="" className="hero-layer hero-layer-fg" />
               
               <div className="hero-layer-works-box">

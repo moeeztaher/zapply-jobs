@@ -6,6 +6,7 @@
     align-items: center;
     position: relative;
     z-index: 2;
+    margin-top: -1px; /* Prevent gap during animation */
 }
 
 .stars-image {
@@ -20,6 +21,7 @@
     background-color: #FFFFFF;
     position: relative;
     z-index: 2;
+    margin-top: -1px; /* Prevent gap during animation */
 }
 
 .footer-text h2 {

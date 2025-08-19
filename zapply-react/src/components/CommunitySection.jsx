@@ -1,10 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useTheme } from '../context/ThemeContext';
 import useInView from '../hooks/useInView';
 import './CommunitySection.css';
 
 const CommunitySection = () => {
   const [ref, isInView] = useInView({ threshold: 0.1 });
+  const { isDarkMode } = useTheme();
 
   return (
     <section className="community-section" id="community" ref={ref}>
@@ -42,13 +44,13 @@ const CommunitySection = () => {
           </p>
           <div className="community-buttons">
             <a href="https://discord.gg/yKWw28q7Yq" target="_blank" rel="noopener noreferrer" className="community-btn">
-              <img src="/discord-button.svg" alt="Discord" />
+              <img src={isDarkMode ? "/discord-button-dark.svg" : "/discord-button.svg"} alt="Discord" />
             </a>
             <a href="https://www.reddit.com/r/Zapply/" target="_blank" rel="noopener noreferrer" className="community-btn">
-              <img src="/reddit-button.svg" alt="Reddit" />
+              <img src={isDarkMode ? "/reddit-button-dark.svg" : "/reddit-button.svg"} alt="Reddit" />
             </a>
             <a href="https://github.com/zapplyjobs" target="_blank" rel="noopener noreferrer" className="community-btn">
-              <img src="/github-button.svg" alt="GitHub" />
+              <img src={isDarkMode ? "/github-button-dark.svg" : "/github-button.svg"} alt="GitHub" />
             </a>
           </div>
         </motion.div>
