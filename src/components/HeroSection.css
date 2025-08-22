@@ -1,7 +1,7 @@
 .hero-section {
     padding: 80px 80px 60px;
-    margin-top: -100px; /* Pull up to go behind header */
-    padding-top: 180px; /* Add extra padding to compensate */
+    margin-top: -100px; /* Pull up behind header */
+    padding-top: 180px; /* Add padding to compensate */
     position: relative;
     background: linear-gradient(to bottom, #e8e8e8 0%, #FFFFFF 100%);
     overflow: visible;
@@ -86,7 +86,7 @@
     font-size: 15px;
     font-family: 'Montserrat', sans-serif;
     background: #FFFFFF;
-    transition: all 0.3s ease;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .hero-waitlist-input::placeholder {
@@ -108,7 +108,7 @@
     font-size: 16px;
     font-weight: 700;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
     font-family: 'Montserrat', sans-serif;
     position: relative;
     overflow: hidden;
