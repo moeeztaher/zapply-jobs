@@ -7,7 +7,7 @@
   --bg-card-light: #e8e6d7;  /* Card background on light sections */
   
   /* Text Colors */
-  --text-on-dark: #ffffff;  /* Text on dark backgrounds */
+  --text-on-dark: #d1cfc0;  /* Text on dark backgrounds */
   --text-on-light: #1f1f1f;  /* Text on light backgrounds */
   --text-secondary-dark: #b8b8b8;  /* Secondary text on dark */
   --text-secondary-light: #5a5a5a;  /* Secondary text on light */
@@ -123,7 +123,7 @@ html.dark {
 
 .dark .hero-waitlist-btn {
   background: #FF6B4A;
-  color: #FFFFFF;
+  color: #d1cfc0;
 }
 
 .dark .hero-waitlist-btn:hover {
@@ -237,7 +237,7 @@ html.dark {
 
 .dark .apply-jobs-section .btn-primary {
   background: var(--accent-primary);
-  color: #FFFFFF;
+  color: #d1cfc0;
 }
 
 .dark .apply-jobs-section .btn-primary:hover {
@@ -287,7 +287,7 @@ html.dark {
 
 .dark .community-section .waitlist-btn {
   background: #FF6B4A;
-  color: #FFFFFF;
+  color: #d1cfc0;
 }
 
 .dark .community-section .waitlist-btn:hover {
@@ -448,7 +448,7 @@ html.dark {
 
 .dark .newsletter-btn {
   background: #FF6B4A;
-  color: #FFFFFF;
+  color: #d1cfc0;
 }
 
 .dark .newsletter-btn:hover {
