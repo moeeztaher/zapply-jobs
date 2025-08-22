@@ -39,10 +39,12 @@ html.dark {
 }
 
 /* Header Dark Mode */
+.dark .header-wrapper {
+  /* Header wrapper stays transparent */
+}
+
 .dark .header {
-  background: var(--bg-dark);
-  backdrop-filter: blur(10px);
-  border-bottom: none;
+  /* Inner header styles */
 }
 
 .dark .header nav a {
@@ -123,7 +125,7 @@ html.dark {
 
 .dark .hero-waitlist-btn {
   background: #FF6B4A;
-  color: #d1cfc0;
+  color: #000000;
 }
 
 .dark .hero-waitlist-btn:hover {
