@@ -1,0 +1,401 @@
+.hero-section {
+    padding: 80px 80px 60px;
+    position: relative;
+    background: linear-gradient(to bottom, #e8e8e8 0%, #FFFFFF 100%);
+    overflow: visible;
+    text-align: center;
+}
+
+.hero-content-wrapper {
+    max-width: 1400px;
+    margin: 60px auto 85px;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.hero-left {
+    flex: 1;
+    min-width: 0;
+}
+
+.hero-right {
+    flex: 1;
+    min-width: 0;
+}
+
+.hero-title {
+    font-size: 72px;
+    font-weight: 600;
+    color: #2D2D2D;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.hero-title .autopilot {
+    font-family: 'Caveat', cursive;
+    color: #FF6B4A;
+    font-weight: 700;
+    font-size: 80px;
+    font-style: normal;
+    margin-left: 16px;
+}
+
+.hero-subtitle {
+    font-size: 20px;
+    color: #2D2D2D;
+    font-weight: 400;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.hero-waitlist {
+    margin-top: 50px;
+}
+
+.waitlist-title {
+    text-align: left;
+    font-size: 24px;
+    font-weight: 700;
+    color: #2D2D2D;
+    margin-bottom: 10px;
+}
+
+.waitlist-subtitle {
+    text-align: left;
+    font-size: 16px;
+    color: #6B6B6B;
+    margin-bottom: 25px;
+}
+
+.hero-waitlist-form {
+    display: flex;
+    gap: 12px;
+    justify-content: flex-start;
+}
+
+.hero-waitlist-input {
+    flex: 1;
+    max-width: 300px;
+    padding: 14px 20px;
+    border: 2px solid #E5E5E5;
+    border-radius: 10px;
+    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+    background: #FFFFFF;
+    transition: all 0.3s ease;
+}
+
+.hero-waitlist-input::placeholder {
+    color: #9B9B9B;
+}
+
+.hero-waitlist-input:focus {
+    outline: none;
+    border-color: #FF6B4A;
+    transform: scale(1.02);
+}
+
+.hero-waitlist-btn {
+    padding: 14px 36px;
+    background: #FF6B4A;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-waitlist-btn:hover {
+    background: #FF5733;
+    transform: scale(1.05);
+}
+
+.hero-waitlist-btn:active {
+    transform: scale(1.02);
+}
+
+.main-image-container {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+}
+
+.hero-rounded-container {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: #F8F8F8;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    width: 120%;
+    margin-left: -10%;
+    padding-bottom: calc(2216 / 4520 * 120%);
+    height: 0;
+}
+
+.hero-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.hero-layer-bg {
+    z-index: 1;
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+
+.hero-layer-logo {
+    z-index: 2;
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+    left: -20%;
+    /* top: -10%; */
+    opacity: 0.6;
+    animation: logoPulse 2s ease-out forwards;
+}
+
+@keyframes logoPulse {
+    0% {
+        transform: scale(0.7);
+        opacity: 0.2;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.4;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0.6;
+    }
+}
+
+.hero-layer-box {
+    z-index: 3;
+    width: 30%;
+    height: auto;
+    left: auto;
+    right: 1%;
+    top: 45%;
+    transform: translateY(-50%);
+    object-fit: contain;
+    animation: slideInRight 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+@keyframes slideInRight {
+    0% {
+        right: -35%;
+        opacity: 0;
+    }
+    100% {
+        right: 1%;
+        opacity: 1;
+    }
+}
+
+.hero-layer-fg {
+    z-index: 4;
+    /* IMPORTANT: Same scaling as background */
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+
+.hero-layer-works-box {
+    position: absolute;
+    z-index: 3;
+    width: 25%;
+    aspect-ratio: 0.8;
+    left: 3%;
+    top: 45%;
+    transform: translateY(-50%);
+    animation: slideInLeft 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    font-size: calc(0.25vw + 0.25vh);
+}
+
+.works-box-content {
+    width: 100%;
+    height: 100%;
+    background: white;
+    border-radius: 8%;
+    padding: 8%;
+    box-shadow: 0 2% 6% rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+.works-title {
+    font-size: 1.4em;
+    font-weight: 700;
+    color: #2D2D2D;
+    margin: 0 0 0.8em 0;
+    font-family: 'Montserrat', sans-serif;
+    text-align: left;
+}
+
+.platform-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    padding: 0.4em 0.6em;
+    background: #F8F8F8;
+    border-radius: 100px;
+    margin-bottom: 0.6em;
+    border: 1px solid #E5E5E5;
+}
+
+.platform-item img {
+    width: 1.2em;
+    height: 1.2em;
+    object-fit: contain;
+}
+
+.platform-item span {
+    font-size: 1em;
+    color: #2D2D2D;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.platform-item.more {
+    background: #F0F0F0;
+    justify-content: center;
+    width: max-content;
+    padding: 0.4em 1em;
+}
+
+@keyframes slideInLeft {
+    0% {
+        left: -30%;
+        opacity: 0;
+    }
+    100% {
+        left: 3%;
+        opacity: 1;
+    }
+}
+
+@media (max-width: 1024px) {
+    .hero-content-wrapper {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .waitlist-title,
+    .waitlist-subtitle {
+        text-align: center;
+    }
+
+    .hero-waitlist-form {
+        justify-content: center;
+    }
+
+    .main-image-container {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .hero-rounded-container {
+        aspect-ratio: 4520 / 2216;
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 60px 25px;
+    }
+
+    .hero-content-wrapper {
+        flex-direction: column-reverse;
+        gap: 40px;
+        margin: 60px auto 0;
+    }
+
+    .hero-title {
+        font-size: 42px;
+    }
+
+    .hero-title .autopilot {
+        font-size: 48px;
+    }
+
+    .hero-subtitle {
+        font-size: 18px;
+    }
+
+    .waitlist-title,
+    .waitlist-subtitle {
+        text-align: center;
+    }
+
+    .hero-waitlist {
+        padding: 0;
+        margin-top: 30px;
+    }
+
+    .hero-waitlist-form {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+    }
+
+    .hero-waitlist-input {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .hero-waitlist-btn {
+        width: 100%;
+    }
+
+    .main-image-container {
+        width: 100%;
+    }
+
+    .hero-rounded-container {
+        width: 100%;
+        margin-left: 0;
+        padding-bottom: 0;
+        height: 300px;
+        min-height: 300px;
+    }
+    
+    .hero-layer-bg,
+    .hero-layer-fg {
+        object-fit: cover;
+    }
+    
+    .hero-layer-works-box {
+        display: none;
+    }
+
+    .main-image-container {
+        width: 100%;
+    }
+
+    .hero-rounded-container {
+        width: 100%;
+    }
+
+    .hero-main-image {
+        width: 100%;
+        height: auto;
+    }
+}

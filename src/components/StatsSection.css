@@ -1,0 +1,119 @@
+.stars-section {
+    padding: 45px 20px 60px 20px;
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    margin-top: -1px; /* Prevent gap during animation */
+}
+
+.stars-image {
+    max-width: 600px;
+    width: 100%;
+    height: auto;
+}
+
+.footer-text {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #FFFFFF;
+    position: relative;
+    z-index: 2;
+    margin-top: -1px; /* Prevent gap during animation */
+}
+
+.footer-text h2 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #2D2D2D;
+    margin-bottom: 40px;
+}
+
+.zapply-text {
+    color: #FF6B4A;
+    font-weight: 800;
+}
+
+.highlight-text {
+    color: #FF6B4A;
+    font-weight: 800;
+    font-size: 30px;
+}
+
+.companies-banner {
+    background-color: #FFFFFF;
+    padding: 20px 0 40px 0;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+}
+
+.companies-ticker {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+}
+
+.companies-track {
+    display: flex;
+    flex-shrink: 0;
+    animation: scroll 25s linear infinite;
+}
+
+.companies-image {
+    flex-shrink: 0;
+    width: auto;
+    height: 45px;
+    padding: 0 60px;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.companies-ticker::before,
+.companies-ticker::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 100px;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.companies-ticker::before {
+    left: 0;
+    background: linear-gradient(90deg, #FFFFFF 0%, transparent 100%);
+}
+
+.companies-ticker::after {
+    right: 0;
+    background: linear-gradient(90deg, transparent 0%, #FFFFFF 100%);
+}
+
+@media (max-width: 768px) {
+    .footer-text h2 {
+        font-size: 22px;
+    }
+    
+    .highlight-text {
+        font-size: 24px;
+    }
+    
+    .companies-image {
+        height: 40px;
+        margin: 0 20px;
+    }
+    
+    .companies-track {
+        animation: scroll 20s linear infinite;
+    }
+}
