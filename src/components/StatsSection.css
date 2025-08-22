@@ -51,22 +51,24 @@
 }
 
 .companies-ticker {
-    display: flex;
-    width: 100%;
     overflow: hidden;
+    position: relative;
+    width: 100%;
 }
 
 .companies-track {
     display: flex;
-    flex-shrink: 0;
-    animation: scroll 25s linear infinite;
+    animation: scroll 80s linear infinite;
+    will-change: transform;
+    width: fit-content;
 }
 
 .companies-image {
     flex-shrink: 0;
     width: auto;
     height: 45px;
-    padding: 0 60px;
+    padding: 0 30px;
+    display: block;
 }
 
 @keyframes scroll {
@@ -74,7 +76,7 @@
         transform: translateX(0);
     }
     100% {
-        transform: translateX(-100%);
+        transform: translateX(-50%);
     }
 }
 
@@ -83,7 +85,7 @@
     content: '';
     position: absolute;
     top: 0;
-    width: 100px;
+    width: 50px; /* Reduced from 100px */
     height: 100%;
     z-index: 2;
     pointer-events: none;
@@ -110,10 +112,10 @@
     
     .companies-image {
         height: 40px;
-        margin: 0 20px;
+        padding: 0 20px; /* Adjusted padding for mobile */
     }
     
     .companies-track {
-        animation: scroll 20s linear infinite;
+        animation: scroll 60s linear infinite;
     }
 }

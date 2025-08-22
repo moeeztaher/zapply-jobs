@@ -46,12 +46,12 @@ const StatsSection = () => {
       <section className="companies-banner">
         <div className="companies-ticker">
           <div className="companies-track">
-            <img src={isDarkMode ? "/companies-dark.svg" : "/companies-banner.svg"} alt="Companies" className="companies-image" />
-            <img src={isDarkMode ? "/companies-dark.svg" : "/companies-banner.svg"} alt="Companies" className="companies-image" />
-          </div>
-          <div className="companies-track" aria-hidden="true">
-            <img src={isDarkMode ? "/companies-dark.svg" : "/companies-banner.svg"} alt="Companies" className="companies-image" />
-            <img src={isDarkMode ? "/companies-dark.svg" : "/companies-banner.svg"} alt="Companies" className="companies-image" />
+            {[...Array(10)].map((_, i) => (
+              <img key={i} src={isDarkMode ? "/companies-dark.svg" : "/companies-banner.svg"} alt="Companies" className="companies-image" />
+            ))}
+            {[...Array(10)].map((_, i) => (
+              <img key={`dup-${i}`} src={isDarkMode ? "/companies-dark.svg" : "/companies-banner.svg"} alt="Companies" className="companies-image" />
+            ))}
           </div>
         </div>
       </section>

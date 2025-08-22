@@ -2,6 +2,7 @@
     background-color: #231f20;
     color: #FFFFFF;
     padding: 80px 80px 40px;
+    margin-top: auto; /* Push footer to bottom */
 }
 
 .footer-container {
